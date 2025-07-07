@@ -8,29 +8,39 @@ const App = () => {
   //const image: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png`;
   //const image2: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg`;
 
+  const tableDataStyle: string = "border-2 border-white p-[0.6rem]";
+
   return (
-    <div>
-      <img src={logo4} />
-      <div>
-        <img src={pokeball2} />
-        <span>{" "}Pokémon Search App{" "}</span>
-        <img src={pokeball2} />
+    <div className="bg-dark-blue font-display h-full flex flex-col items-center">
+      <img src={logo4} className="h-32 w-auto my-6 z-10" />
+      <div className="z-10">
+        <img src={pokeball2} className="h-10 w-auto inline align-top" />
+        <span className="text-white font-bold text-3xl">
+          {" "}
+          Pokémon Search App{" "}
+        </span>
+        <img src={pokeball2} className="h-10 w-auto inline align-top" />
       </div>
 
-      <div id="pokedex">
-        <form id="search-form">
-          <label htmlFor="search-input">
+      <div
+        id="pokedex"
+        className="z-10 bg-white w-[450px] my-8 p-4 rounded-2xl shadow-[10px_10px_grey] flex flex-col justify-center items-center gap-2"
+      >
+        <form id="search-form" className="mb-3">
+          <label htmlFor="search-input" className="block mb-3">
             Search for a Pokémon Name or ID:
           </label>
           <input
             id="search-input"
             name="search-input"
             type="text"
+            className="p-3 mr-3 outline-1 rounded-md focus:outline-3 focus:outline-blue-700 focus:rounded-md"
             required
           />
           <button
             type="submit"
             id="search-button"
+            className="w-25 py-4 rounded-full bg-[#7f21ab] text-white text-sm hover:cursor-pointer"
           >
             Search
           </button>
@@ -38,59 +48,71 @@ const App = () => {
 
         <div
           id="output"
+          className="w-full min-h-[325px] p-3 flex flex-col justify-center"
         >
-          <div id="name-and-id">
+          <div id="name-and-id" className="h-7 mb-1 text-lg">
             <span id="pokemon-name"></span>
             <span id="pokemon-id"></span>
           </div>
 
-          <div id="size">
+          <div id="size" className="text-sm">
             <span id="weight"></span>
             <span id="height"></span>
           </div>
-          <div id="sprite-container">
-            <img id="sprite" src="" />
+          <div
+            id="sprite-container"
+            className="flex items-center justify-center grow-2"
+          >
+            <img id="sprite" src="" className="w-52" />
           </div>
-          <div id="types">
-            <span id="type-water">Water</span>{" "}
+          <div
+            id="types"
+            className="min-h-8 flex flex-wrap justify-start gap-1"
+          >
+            <span
+              className="bg-pink-300 w-18 p-1 text-xs flex items-center justify-center rounded-md"
+              id="type-water"
+            >
+              Water
+            </span>{" "}
             {/* Have to loop over types array to create a single 'type' component for each */}
           </div>
         </div>
 
-        <div id="base-stats-div">
-          <table>
+        <div id="base-stats-div" className="w-full max-w-[450px]">
+          <table className="w-full bg-[#7f21ab] text-white text-center">
             <tr>
-              <th>Base</th>
-              <th>Stats</th>
+              <th className={tableDataStyle}>Base</th>
+              <th className={tableDataStyle}>Stats</th>
             </tr>
             <tr>
-              <td>HP:</td>
-              <td id="hp"></td>
+              <td className={tableDataStyle}>HP:</td>
+              <td className={tableDataStyle} id="hp"></td>
             </tr>
             <tr>
-              <td>Attack:</td>
-              <td id="attack"></td>
+              <td className={tableDataStyle}>Attack:</td>
+              <td className={tableDataStyle} id="attack"></td>
             </tr>
             <tr>
-              <td>Defense:</td>
-              <td id="defense"></td>
+              <td className={tableDataStyle}>Defense:</td>
+              <td className={tableDataStyle} id="defense"></td>
             </tr>
             <tr>
-              <td>Sp.Attack:</td>
-              <td id="special-attack"></td>
+              <td className={tableDataStyle}>Sp.Attack:</td>
+              <td className={tableDataStyle} id="special-attack"></td>
             </tr>
             <tr>
-              <td>Sp.Defense:</td>
-              <td id="special-defense"></td>
+              <td className={tableDataStyle}>Sp.Defense:</td>
+              <td className={tableDataStyle} id="special-defense"></td>
             </tr>
             <tr>
-              <td>Speed:</td>
-              <td id="speed"></td>
+              <td className={tableDataStyle}>Speed:</td>
+              <td className={tableDataStyle} id="speed"></td>
             </tr>
           </table>
         </div>
       </div>
-      <img src={pokeball3} />
+      <img src={pokeball3} className="fixed bottom-0 right-0" />
     </div>
   );
 };

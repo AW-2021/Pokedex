@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+    --color-dark-blue: #1b1b32;
+    --font-display: "Verdana", "sans-serif";
+}
