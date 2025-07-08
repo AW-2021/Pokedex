@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+:root {
+
+}
 @theme {
     --color-dark-blue: #1b1b32;
     --font-display: "Verdana", "sans-serif";
+    --background-image-gradient-rainbow: conic-gradient(from 90deg, violet, red, orange, yellow, green, blue, indigo, violet);
 }
