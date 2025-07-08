@@ -13,7 +13,7 @@ const App = () => {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
   const tableDataStyle: string = "border-3 border-white p-[0.6rem]";
-  const baseTypeClass: string = "bg-gradient-rainbow w-18 p-1 text-xs flex items-center justify-center rounded-md uppercase";
+  const baseTypeClass: string = "w-18 p-1 text-xs flex items-center justify-center rounded-md uppercase";
 
   const baseStats: string[] = [
     "Hp",
@@ -99,7 +99,7 @@ const App = () => {
 
           <div
             id="sprite-container"
-            className="flex items-end justify-center grow-2"
+            className="flex items-center justify-center grow-2"
           >
             {pokemon?.sprites && (
               <img
@@ -119,7 +119,7 @@ const App = () => {
               <span
                 key={index}
                 id={"type-" + pokeType.type.name}
-                className="bg-gradient-rainbow w-18 p-1 text-xs flex items-center justify-center rounded-md uppercase"
+                className={`${baseTypeClass} ${typeColors[pokeType.type.name] || 'bg-red-400'}`}
               >
                 {pokeType.type.name}
               </span>
