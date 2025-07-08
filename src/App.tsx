@@ -2,34 +2,7 @@ import { useState } from "react";
 import logo4 from "./assets/images/logo4.png";
 import pokeball2 from "./assets/images/pokeball2.webp";
 import pokeball3 from "./assets/images/pokeball3.png";
-
-interface Sprite {
-  front_default: string;
-}
-
-interface Type {
-  slot: number;
-  type: {
-    name: string;
-  }
-}
-
-interface Stat {
-  base_stat: number;
-  stat: {
-    name: string;
-  }
-}
-
-interface Pokemon {
-  id: number;
-  name: string;
-  weight: number;
-  height: number;
-  sprites: Sprite;
-  types: Type[];
-  stats: Stat[];
-}
+import { type Pokemon } from "./lib/types";
 
 const App = () => {
   //const image: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png`;
