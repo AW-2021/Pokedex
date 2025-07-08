@@ -2,15 +2,17 @@ import { useState } from "react";
 import logo4 from "./assets/images/logo4.png";
 import pokeball2 from "./assets/images/pokeball2.webp";
 import pokeball3 from "./assets/images/pokeball3.png";
+import card from "./assets/images/card.webp";
 import { type Pokemon } from "./types";
 import { typeColors } from "./utils/typeColors";
 
 const App = () => {
   //const image: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png`;
   //const image2: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg`;
-  
+
   const [nameOrId, setNameOrId] = useState<string>("");
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
+  const [showText, setShowText] = useState<boolean>(false);
 
   const tableDataStyle: string = "border-3 border-white p-[0.6rem]";
   const baseTypeClass: string = "w-18 p-1 text-xs flex items-center justify-center rounded-md uppercase";
@@ -39,12 +41,34 @@ const App = () => {
     }
   };
 
+  const handleMouseEnterLeave = () => {
+    setShowText((prevState) => !prevState);
+  };
+
   return (
     <div className="bg-dark-blue font-display h-full flex flex-col items-center">
+      <div
+        onMouseEnter={handleMouseEnterLeave}
+        onMouseLeave={handleMouseEnterLeave}
+        className="fixed top-0 right-0 h-48 w-auto hover:h-52 hover:cursor-pointer hover:drop-shadow-2xl hover:drop-shadow-indigo-500"
+      >
+        <img src={card} alt="Memory Game" className="h-full rotate-6" />
+        <img
+          src={card}
+          alt="Memory Game"
+          className="absolute top-3 right-20 h-full -rotate-16 hover:-rotate-28 hover:top-6"
+        />
+        {showText && (
+          <p className="text-white mt-1 text-center font-semibold">
+            Play the <p>Memory Game →</p>
+          </p>
+        )}
+      </div>
+
       <img src={logo4} className="h-32 w-auto my-6 z-10" />
       <div className="z-10">
         <img src={pokeball2} className="h-9 w-auto inline align-top" />
-        <span className="text-white font-bold text-3xl">
+        <span className="text-white font-bold text-3xl ">
           {" "}
           Pokémon Search App{" "}
         </span>
@@ -119,7 +143,9 @@ const App = () => {
               <span
                 key={index}
                 id={"type-" + pokeType.type.name}
-                className={`${baseTypeClass} ${typeColors[pokeType.type.name] || 'bg-red-400'}`}
+                className={`${baseTypeClass} ${
+                  typeColors[pokeType.type.name] || "bg-red-400"
+                }`}
               >
                 {pokeType.type.name}
               </span>
