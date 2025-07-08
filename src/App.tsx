@@ -34,7 +34,8 @@ interface Pokemon {
 const App = () => {
   //const image: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png`;
   //const image2: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg`;
-  const tableDataStyle: string = "border-2 border-white p-[0.6rem]";
+  const tableDataStyle: string = "border-3 border-white p-[0.6rem]";
+  const baseStats: string[] = ['Hp', 'Attack', 'Defense', 'Special Attack', 'Special Defense', 'Speed'];
 
   const [nameOrId, setNameOrId] = useState<string>('');
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
@@ -50,10 +51,9 @@ const App = () => {
     } catch (error) {
       console.log("Error: ", error);
       alert("Pokemon not found!");
+      setPokemon(null);
     }
   }
-
-  console.log(pokemon);
 
   return (
     <div className="bg-dark-blue font-display h-full flex flex-col items-center">
@@ -71,7 +71,7 @@ const App = () => {
         id="pokedex"
         className="z-10 bg-white w-[450px] my-8 px-4 py-5 rounded-2xl shadow-[10px_10px_grey] flex flex-col justify-center items-center gap-2"
       >
-        <form id="search-form" className="mb-3" onSubmit={fetchPokemon}>
+        <form id="search-form" className="mb-3 mt-1" onSubmit={fetchPokemon}>
           <label htmlFor="search-input" className="block mb-3">
             Search for a Pokémon Name or ID:
           </label>
@@ -98,31 +98,33 @@ const App = () => {
           className="w-full min-h-[325px] p-3 flex flex-col justify-center"
         >
           <div id="name-and-id" className="h-7 mb-1 text-lg">
-            <span id="pokemon-name"></span>
-            <span id="pokemon-id"></span>
+            <span id="pokemon-name" className="uppercase">{pokemon?.name}</span>{" "}
+            <span id="pokemon-id">{pokemon?.id && '#'+ pokemon?.id}</span>
           </div>
 
           <div id="size" className="text-sm">
-            <span id="weight"></span>
-            <span id="height"></span>
+            <span id="weight">{pokemon?.weight && 'Weight: ' + pokemon?.weight}</span>{" "}
+            <span id="height">{pokemon?.height && 'Height: ' + pokemon?.height}</span>
           </div>
           <div
             id="sprite-container"
-            className="flex items-center justify-center grow-2"
+            className="flex items-end justify-center grow-2"
           >
-            <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png" className="w-52" />
+            <img id="sprite" src={pokemon?.sprites.front_default} className="w-52" />
           </div>
           <div
             id="types"
-            className="min-h-8 flex flex-wrap justify-start gap-1"
+            className="min-h-8 flex flex-wrap justify-start gap-2"
           >
-            <span
-              className="bg-pink-300 w-18 p-1 text-xs flex items-center justify-center rounded-md"
-              id="type-water"
-            >
-              Water
-            </span>{" "}
-            {/* Have to loop over types array to create a single 'type' component for each */}
+            {
+              pokemon?.types.map((pokeType, index) => 
+              <span
+                key={index}
+                id={'type-'+ pokeType.type.name}
+                className="bg-pink-300 w-18 p-1 text-xs flex items-center justify-center rounded-md uppercase">
+                {pokeType.type.name}
+              </span>)
+            }
           </div>
         </div>
 
@@ -133,30 +135,22 @@ const App = () => {
                 <th className={tableDataStyle}>Base</th>
                 <th className={tableDataStyle}>Stats</th>
               </tr>
-              <tr>
-                <td className={tableDataStyle}>HP:</td>
-                <td className={tableDataStyle} id="hp"></td>
-              </tr>
-              <tr>
-                <td className={tableDataStyle}>Attack:</td>
-                <td className={tableDataStyle} id="attack"></td>
-              </tr>
-              <tr>
-                <td className={tableDataStyle}>Defense:</td>
-                <td className={tableDataStyle} id="defense"></td>
-              </tr>
-              <tr>
-                <td className={tableDataStyle}>Sp.Attack:</td>
-                <td className={tableDataStyle} id="special-attack"></td>
-              </tr>
-              <tr>
-                <td className={tableDataStyle}>Sp.Defense:</td>
-                <td className={tableDataStyle} id="special-defense"></td>
-              </tr>
-              <tr>
-                <td className={tableDataStyle}>Speed:</td>
-                <td className={tableDataStyle} id="speed"></td>
-              </tr>
+              {
+                pokemon?.stats ? pokemon?.stats.map((pokeStat) => (
+                  <tr>
+                    <td className={tableDataStyle + ' capitalize w-3/5'}>{pokeStat.stat.name.replace(/-/g, ' ')}:</td>
+                    <td className={tableDataStyle + ' w-2/5'} id={pokeStat.stat.name}>{pokeStat.base_stat}</td>
+                  </tr>
+                )) : 
+                (
+                  baseStats.map((base) => (
+                    <tr>
+                      <td className={tableDataStyle + ' w-3/5'}>{base}:</td>
+                      <td className={tableDataStyle + ' w-2/5'}></td>
+                    </tr>
+                  ))
+                )
+              }
             </tbody>
           </table>
         </div>
