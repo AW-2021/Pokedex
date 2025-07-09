@@ -1,5 +1,26 @@
+interface Other {
+  dream_world: {
+    front_default: string | null;
+  }
+  "official-artwork": {
+    front_default: string;
+  }
+}
+
+interface Versions {
+  "generation-v": {
+    "black-white": {
+      animated: {
+        front_default: string;
+      }
+    }
+  }
+}
+
 interface Sprite {
   front_default: string;
+  other: Other;
+  versions: Versions;
 }
 
 interface PokeType {
