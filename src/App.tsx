@@ -3,14 +3,11 @@ import { type Pokemon } from "./types";
 import { typeColors } from "./utils/typeColors";
 import logo4 from "./assets/images/logo4.png";
 import pokeball2 from "./assets/images/pokeball2.webp";
-import pokeball3 from "./assets/images/pokeball3.png";
-import card from "./assets/images/card.webp";
+// import card from "./assets/images/card.webp";
+// import cards from "./assets/images/cards.png";
 import pokemonCards from "./assets/images/pokemoncards.png";
 
 const App = () => {
-  //const image: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png`;
-  //const image2: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg`;
-
   const [nameOrId, setNameOrId] = useState<string>("");
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
   const [showText, setShowText] = useState<boolean>(false);
@@ -47,25 +44,25 @@ const App = () => {
   };
 
   return (
-    <div className="bg-dark-blue font-display h-full flex flex-col items-center">
+    <div className="bg-dark-blue font-display h-full flex flex-col items-center bg-game-2 bg-fixed">
       <div
         onMouseEnter={handleMouseEnterLeave}
         onMouseLeave={handleMouseEnterLeave}
-        className="fixed top-0 right-0 h-48 hover:h-52 hover:cursor-pointer hover:drop-shadow-2xl hover:drop-shadow-indigo-500"
+        className="fixed top-0 right-0 h-48 hover:h-52 hover:cursor-pointer hover:drop-shadow-2xl hover:drop-shadow-indigo-600"
       >
         <img src={pokemonCards} alt="Memory Game" className="z-10 h-full" />
         
         {showText && (
-            <p className="z-10 h-full text-white mt-1 text-center font-semibold">
+            <p className="z-10 h-full text-center font-semibold">
               Play the <p>Memory Game →</p>
             </p>
         )}
       </div>
 
-      <img src={logo4} className="h-32 w-auto my-6 z-20 drop-shadow-xl drop-shadow-amber-400" />
+      <img src={logo4} className="h-32 w-auto my-6 z-20 drop-shadow-lg drop-shadow-amber-400" />
       <div className="z-20">
         <img src={pokeball2} className="h-9 w-auto inline align-top animate-bounce" />
-        <span className="text-white font-bold text-3xl ">
+        <span className="font-bold text-3xl ">
           {" "}
           Pokémon Search App{" "}
         </span>
@@ -92,7 +89,7 @@ const App = () => {
           <button
             type="submit"
             id="search-button"
-            className="w-25 py-4 rounded-full bg-[#7f21ab] text-white text-sm hover:cursor-pointer"
+            className="w-25 py-4 rounded-full bg-indigo-800 text-white text-sm hover:cursor-pointer"
           >
             Search
           </button>
@@ -123,12 +120,12 @@ const App = () => {
             className="flex items-center justify-center grow-2"
           >
             {pokemon?.sprites && (
-              <img
-                id="sprite"
-                src={pokemon?.sprites.front_default}
-                alt={pokemon?.name + " sprite"}
-                className="w-52"
-              />
+                <img
+                  id="sprite"
+                  src={pokemon?.sprites.versions["generation-v"]["black-white"].animated.front_default || pokemon?.sprites.front_default}
+                  alt={pokemon?.name + " sprite"}
+                  className={`${pokemon?.id >= 650 ? 'w-52' : 'w-32'}`}
+                />
             )}
           </div>
 
@@ -151,7 +148,7 @@ const App = () => {
         </div>
 
         <div id="base-stats-div" className="w-full max-w-[450px]">
-          <table className="w-full bg-[#7f21ab] text-white text-center">
+          <table className="w-full bg-indigo-800 text-white text-center">
             <tbody>
               <tr>
                 <th className={tableDataStyle}>Base</th>
@@ -181,8 +178,6 @@ const App = () => {
           </table>
         </div>
       </div>
-
-      <img src={pokeball3} className="fixed bottom-0 left-0" />
     </div>
   );
 };
