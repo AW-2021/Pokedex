@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { type Pokemon } from "./types";
+import { typeColors } from "./utils/typeColors";
 import logo4 from "./assets/images/logo4.png";
 import pokeball2 from "./assets/images/pokeball2.webp";
 import pokeball3 from "./assets/images/pokeball3.png";
 import card from "./assets/images/card.webp";
-import { type Pokemon } from "./types";
-import { typeColors } from "./utils/typeColors";
+import pokemonCards from "./assets/images/pokemoncards.png";
 
 const App = () => {
   //const image: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png`;
@@ -50,34 +51,30 @@ const App = () => {
       <div
         onMouseEnter={handleMouseEnterLeave}
         onMouseLeave={handleMouseEnterLeave}
-        className="fixed top-0 right-0 h-48 w-auto hover:h-52 hover:cursor-pointer hover:drop-shadow-2xl hover:drop-shadow-indigo-500"
+        className="fixed top-0 right-0 h-48 hover:h-52 hover:cursor-pointer hover:drop-shadow-2xl hover:drop-shadow-indigo-500"
       >
-        <img src={card} alt="Memory Game" className="h-full rotate-6" />
-        <img
-          src={card}
-          alt="Memory Game"
-          className="absolute top-3 right-20 h-full -rotate-16 hover:-rotate-28 hover:top-6"
-        />
+        <img src={pokemonCards} alt="Memory Game" className="z-10 h-full" />
+        
         {showText && (
-          <p className="text-white mt-1 text-center font-semibold">
-            Play the <p>Memory Game →</p>
-          </p>
+            <p className="z-10 h-full text-white mt-1 text-center font-semibold">
+              Play the <p>Memory Game →</p>
+            </p>
         )}
       </div>
 
-      <img src={logo4} className="h-32 w-auto my-6 z-10" />
-      <div className="z-10">
-        <img src={pokeball2} className="h-9 w-auto inline align-top" />
+      <img src={logo4} className="h-32 w-auto my-6 z-20 drop-shadow-xl drop-shadow-amber-400" />
+      <div className="z-20">
+        <img src={pokeball2} className="h-9 w-auto inline align-top animate-bounce" />
         <span className="text-white font-bold text-3xl ">
           {" "}
           Pokémon Search App{" "}
         </span>
-        <img src={pokeball2} className="h-9 w-auto inline align-top" />
+        <img src={pokeball2} className="h-9 w-auto inline align-top animate-bounce" />
       </div>
 
       <div
         id="pokedex"
-        className="z-10 bg-white w-[450px] my-8 px-4 py-5 rounded-2xl shadow-[10px_10px_grey] flex flex-col justify-center items-center gap-2"
+        className="z-20 bg-white w-[450px] my-8 px-4 py-5 rounded-2xl shadow-[10px_10px_grey] flex flex-col justify-center items-center gap-2"
       >
         <form id="search-form" className="mb-3 mt-1" onSubmit={fetchPokemon}>
           <label htmlFor="search-input" className="block mb-3">
