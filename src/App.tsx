@@ -6,6 +6,10 @@ import pokeball2 from "./assets/images/pokeball2.webp";
 // import card from "./assets/images/card.webp";
 // import cards from "./assets/images/cards.png";
 import pokemonCards from "./assets/images/pokemoncards.png";
+import pokedex from "./assets/images/pokedex.png";
+import pokedexRight from "./assets/images/pokedex-copy.png";
+//import pokedex7 from "./assets/images/pokedex7.svg";
+//import pokedex77 from "./assets/images/pokedex7-copy.svg";
 
 const App = () => {
   const [nameOrId, setNameOrId] = useState<string>("");
@@ -59,14 +63,24 @@ const App = () => {
         )}
       </div>
 
-      <img src={logo4} className="h-32 w-auto my-6 z-20 drop-shadow-lg drop-shadow-amber-400" />
+      <img src={logo4} className="h-32 w-auto mt-6 mb-4 z-20 drop-shadow-lg drop-shadow-amber-400" />
       <div className="z-20">
         <img src={pokeball2} className="h-9 w-auto inline align-top animate-bounce" />
-        <span className="font-bold text-3xl ">
+        <span className="font-bold text-3xl">
           {" "}
           Pokémon Search App{" "}
         </span>
         <img src={pokeball2} className="h-9 w-auto inline align-top animate-bounce" />
+      </div>
+      
+      <div className="z-20 border-0 border-red-600 flex justify-center items-center">
+        <div className="h-full border-0 border-green-600 relative">
+          <img src={pokedex} className="max-h-[750px] object-contain" />
+        </div>
+        <div className="h-full border-0 border-blue-700 relative">
+          <img src={pokedexRight} className="max-h-[750px] border-0 border-amber-300 object-contain" />
+          <div className="absolute top-[21.5%] left-[8%] h-[68%] w-[75%] bg-green-200 border-4 md:border-6 border-gray-900 rounded-3xl "></div>
+        </div>
       </div>
 
       <div
