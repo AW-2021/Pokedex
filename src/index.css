@@ -18,6 +18,7 @@
   --background-image-game-2: url("./assets/images/bg2.png");
   --background-image-game-3: url("./assets/images/bg3.jpg");
   --background-image-game-4: url("./assets/images/bg4.jpg");
+  --background-image-pokedex: url("./assets/images/pokedexbg.jpg");
 }
 
 input:-webkit-autofill,
