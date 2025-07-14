@@ -1,10 +1,23 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CardGamePage from "./pages/CardGamePage";
 
-const App = () => {
-  return (
-    <HomePage />
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route index element={<HomePage />} />
+      <Route path='/memorycardgame' element={<CardGamePage />} />
+    </>
   )
+);
+
+const App = () => {
+  return <RouterProvider router={router} />
 };
 
 export default App;
