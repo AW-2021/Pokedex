@@ -22,9 +22,7 @@ const OutputDiv = ({ pokemon }: OutputProps) => {
                 .front_default || pokemon?.sprites.front_default
             }
             alt={pokemon?.name + " sprite"}
-            className={`${
-              pokemon?.id < 650 ? "h-full m-auto" : "h-full m-auto"
-            }`}
+            className={`${pokemon?.id < 650 ? "h-full m-auto" : "h-full m-auto"}`}
           />
         )}
       </div>
@@ -37,9 +35,7 @@ const OutputDiv = ({ pokemon }: OutputProps) => {
           <span
             key={index}
             id={"type-" + pokeType.type.name}
-            className={`${baseTypeClass} ${
-              typeColors[pokeType.type.name] || "bg-red-400"
-            }`}
+            className={`${baseTypeClass} ${typeColors[pokeType.type.name] || "bg-red-400"}`}
           >
             {pokeType.type.name}
           </span>

@@ -1,8 +1,42 @@
-
+import { Link } from "react-router-dom";
+import ogLogo from "../assets/images/og-logo.png";
+import pokedexIcon from "../assets/images/pokedexIcon.png";
+import Card from "../components/Card";
+import Hero from "../components/Hero";
 
 const CardGamePage = () => {
+  const numArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
   return (
-    <div className="bg-dark-blue h-full w-full text-white">Card Game Page</div>
+    <div className="bg-dark-blue font-display text-white w-full h-full flex flex-col items-center">
+      <Link to="/">
+        <img src={pokedexIcon} alt="pokedex icon" className="fixed top-2 -left-1 h-[25%] -rotate-6" />
+      </Link>
+
+      <Hero logo={ogLogo} title="Memory Card Game" cssHeight="h-34" hasShadow={false} />
+      
+      <div className="border-2 border-yellow-300 w-11/12 my-6 flex flex-col justify-center gap-6">
+
+        <div className="border-1 border-purple-600 flex justify-between items-center">
+          <div className="border-1 border-red-600">
+            <p>Get points by clicking on an image</p> 
+            <p>but don't click on any more than once!</p>
+          </div>
+          <div className="border-1 border-cyan-400">
+            <p>Score: 0</p>
+            <p>Best Score: 0</p>
+          </div>
+        </div>
+
+        <div className="border-2 border-emerald-600 grid grid-cols-[repeat(4,minmax(100px,1fr))] auto-rows-[minmax(350px,2fr)] grid-flow-row gap-5">
+          {
+            numArray.map((num) => (
+              <Card num={num} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 
