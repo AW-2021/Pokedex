@@ -13,7 +13,7 @@ const OutputDiv = ({ pokemon }: OutputProps) => {
       id="output"
       className="absolute left-[22.4%] bottom-[45.2%] h-[27.2%] w-[53.3%] px-3 py-0.5 bg-game-4 bg-cover border-0 border-yellow-400 rounded-xl flex flex-col justify-around gap-1"
     >
-      <div id="sprite-container" className="border-0 border-indigo-500 h-[80%]">
+      <div id="sprite-container" className="border-0 border-indigo-500 h-[70%]">
         {pokemon?.sprites && (
           <img
             id="sprite"

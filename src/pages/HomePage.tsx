@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="bg-game-2 bg-fixed font-display h-screen w-full sm:h-full flex flex-col items-center ">
       <Navbar />
-      <Hero logo={logo2} title="Pokémon Search App" cssHeight="h-32" hasShadow={true} />
+      <Hero logo={logo2} title="Pokémon Search App" cssStyle="h-32 mb-4" hasShadow={true} />
       <Pokedex />
     </div>
   );

@@ -18,7 +18,7 @@ const Navbar = () => {
       to="/memorycardgame"
       onMouseEnter={handleMouseEnterLeave}
       onMouseLeave={handleMouseEnterLeave}
-      className="fixed top-2 right-2 sm:top-0 sm:right-0 h-[min(18vw,12rem)] hover:h-[min(19vw,13rem)] hover:drop-shadow-2xl hover:drop-shadow-indigo-600 text-[0.8rem]"
+      className="absolute top-2 right-2 sm:top-0 sm:right-0 h-[min(18vw,12rem)] hover:h-[min(19vw,13rem)] hover:drop-shadow-2xl hover:drop-shadow-indigo-600 text-[0.8rem]"
     >
       {screenSize === "sm" ? (
         <FaGamepad className="h-[58%] w-full p-2 border-4 border-indigo-800 text-indigo-800 bg-yellow-300 inset-ring-4 inset-ring-yellow-500 rounded-full" />

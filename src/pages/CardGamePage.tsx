@@ -10,10 +10,10 @@ const CardGamePage = () => {
   return (
     <div className="bg-dark-blue font-display text-white w-full h-full flex flex-col items-center">
       <Link to="/">
-        <img src={pokedexIcon} alt="pokedex icon" className="fixed top-2 -left-1 h-[25%] -rotate-6" />
+        <img src={pokedexIcon} alt="pokedex icon" className="absolute top-2 -left-1 h-[25%] -rotate-6" />
       </Link>
 
-      <Hero logo={ogLogo} title="Memory Card Game" cssHeight="h-34" hasShadow={false} />
+      <Hero logo={ogLogo} title="Memory Card Game" cssStyle="h-34 mb-6" hasShadow={false} />
       
       <div className="border-2 border-yellow-300 w-11/12 my-6 flex flex-col justify-center gap-6">
 
@@ -28,10 +28,10 @@ const CardGamePage = () => {
           </div>
         </div>
 
-        <div className="border-2 border-emerald-600 grid grid-cols-[repeat(4,minmax(100px,1fr))] auto-rows-[minmax(350px,2fr)] grid-flow-row gap-5">
+        <div className="border-2 border-emerald-600 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] auto-rows-[minmax(400px,2fr)] grid-flow-row gap-10">
           {
-            numArray.map((num) => (
-              <Card num={num} />
+            numArray.map((num, index) => (
+              <Card key={index} num={num} />
             ))
           }
         </div>
