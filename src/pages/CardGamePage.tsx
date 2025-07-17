@@ -9,8 +9,8 @@ const CardGamePage = () => {
 
   return (
     <div className="bg-dark-blue font-display text-white w-full h-full flex flex-col items-center">
-      <Link to="/">
-        <img src={pokedexIcon} alt="pokedex icon" className="absolute top-2 -left-1 h-[25%] -rotate-6" />
+      <Link to="/" className=" absolute top-2 -left-1 h-[min(18vw,12rem)] -rotate-6">
+        <img src={pokedexIcon} alt="pokedex icon" className="z-10 h-full" />
       </Link>
 
       <Hero logo={ogLogo} title="Memory Card Game" cssStyle="h-34 mb-6" hasShadow={false} />
