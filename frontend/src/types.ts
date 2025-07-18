@@ -46,3 +46,16 @@ export interface Pokemon {
   types: PokeType[];
   stats: Stat[];
 }
+
+export interface CardType {
+  id: string;
+  name: string;
+  supertype: string;
+  hp: string;
+  types: string[];
+  flavorText: string;
+  images: {
+    small: string;
+    large: string;
+  }
+}
