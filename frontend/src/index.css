@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-blue: #1b1b32;
+  --font-display: "Verdana", "sans-serif";
+  --background-image-gradient-rainbow: conic-gradient(
+    from 90deg,
+    violet,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  --background-image-game-1: url("./assets/images/bg1.jpg");
+  --background-image-game-2: url("./assets/images/bg2.png");
+  --background-image-game-3: url("./assets/images/bg3.jpg");
+  --background-image-game-4: url("./assets/images/bg4.jpg");
+  --background-image-pokedex: url("./assets/images/pokedexbg.jpg");
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: black;
+  /* -webkit-box-shadow: 0 0 0px 1000px #1b1b6c inset; */
+  background-color: #439663;
+  transition: background-color 5000s ease-in-out 0s;
+}
