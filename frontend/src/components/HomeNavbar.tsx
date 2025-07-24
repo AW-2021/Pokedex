@@ -5,7 +5,7 @@ import pokemonCards from "../assets/images/pokemoncards.png";
 import useScreenSize from "../hooks/useScreenSize";
 import { FaGamepad } from "react-icons/fa";
 
-const Navbar = () => {
+const HomeNavbar = () => {
   const [showText, setShowText] = useState<boolean>(false);
   const screenSize: string = useScreenSize();
 
@@ -37,4 +37,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HomeNavbar;
