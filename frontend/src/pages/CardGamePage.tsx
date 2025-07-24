@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import ogLogo from "../assets/images/og-logo.png";
-import pokedexIcon from "../assets/images/pokedexIcon.png";
 import pikachu from "../assets/images/runningpika.webp";
 import Card from "../components/Card";
 import Hero from "../components/Hero";
-import useScreenSize from "../hooks/useScreenSize";
-import { IoIosBook } from "react-icons/io";
 import { type CardType } from "../types";
+import GameNavbar from "../components/GameNavbar";
 
 const ARR_LENGTH: number = 24;
 
 const CardGamePage = () => {
-  const screenSize: string = useScreenSize();
+  
   const [cards, setCards] = useState<CardType[] | null>(null);
   const [chosenCards, setChosenCards] = useState<string[]>([]);
   const [score, setScore] = useState<number>(0);
@@ -22,10 +19,7 @@ const CardGamePage = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const res = await fetch(
-          `${import.meta.env.VITE_BACKEND_URL}/api/cards`
-        );
-        // const res = await fetch(`http://localhost:8000/api/cards`);
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards`);
         const data = await res.json();
         setCards(data?.data?.slice(0, ARR_LENGTH));
       } catch (err) {
@@ -67,21 +61,8 @@ const CardGamePage = () => {
 
   return (
     <div className="w-full h-full min-h-screen flex flex-col items-center bg-dark-blue font-display text-white">
-      <Link
-        to="/"
-        className="absolute top-4 left-3 h-[min(17vw,11rem)] hover:drop-shadow-blue-400 hover:drop-shadow-xl text-"
-      >
-        { screenSize === "sm" ? (
-          <IoIosBook className="h-[58%] w-full p-2 border-4 border-blue-600 text-blue-600 bg-yellow-300 inset-ring-4 inset-ring-yellow-500 rounded-full" />
-        ) : (
-          <img
-            src={pokedexIcon}
-            alt="pokedex icon"
-            className="z-10 h-full"
-          />
-        )}
-      </Link>
-
+      
+      <GameNavbar />
       <Hero logo={ogLogo} title="Memory Card Game" cssStyle="h-34 mb-6" hasShadow={false} />
 
       {loading ? (
