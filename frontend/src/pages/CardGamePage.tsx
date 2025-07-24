@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import ogLogo from "../assets/images/og-logo.png";
-import pikachu from "../assets/images/runningpika.webp";
 import Card from "../components/Card";
 import Hero from "../components/Hero";
 import { type CardType } from "../types";
 import GameNavbar from "../components/GameNavbar";
+import Loader from "../components/Loader";
 
 const ARR_LENGTH: number = 24;
 
@@ -66,12 +66,7 @@ const CardGamePage = () => {
       <Hero logo={ogLogo} title="Memory Card Game" cssStyle="h-34 mb-6" hasShadow={false} />
 
       {loading ? (
-        <div className="my-auto mx-auto flex flex-col items-center gap-10">
-          <img src={pikachu} alt="Loading..." className="max-w-[20rem]" />
-          <p className="text-lg font-semibold tracking-widest text-shadow-lg text-shadow-black ">
-            LOADING ....
-          </p>
-        </div>
+        <Loader />
       ) : (
         <div className="w-full py-4 px-16 border-0 border-yellow-300 my-6 flex flex-col justify-center items-center gap-8">
           <div className="w-full border-0 border-purple-600 flex justify-between items-center">
