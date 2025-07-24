@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <Link
-      to="/memorycardgame"
+      to="/cardgame"
       onMouseEnter={handleMouseEnterLeave}
       onMouseLeave={handleMouseEnterLeave}
       className="absolute top-2 right-2 sm:top-0 sm:right-0 h-[min(18vw,12rem)] hover:h-[min(19vw,13rem)] hover:drop-shadow-2xl hover:drop-shadow-indigo-600 text-[0.8rem]"
