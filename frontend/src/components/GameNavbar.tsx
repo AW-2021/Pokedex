@@ -9,12 +9,12 @@ const GameNavbar = () => {
   return (
     <Link
       to="/"
-      className="absolute top-4 left-3 h-[min(17vw,11rem)] hover:drop-shadow-blue-400 hover:drop-shadow-xl text-"
+      className="absolute top-4 left-3 h-[min(17vw,11rem)] hover:drop-shadow-blue-400 hover:drop-shadow-xl"
     >
       {screenSize === "sm" ? (
         <IoIosBook className="h-[58%] w-full p-2 border-4 border-blue-600 text-blue-600 bg-yellow-300 inset-ring-4 inset-ring-yellow-500 rounded-full" />
       ) : (
-        <img src={pokedexIcon} alt="pokedex icon" className="z-10 h-full" />
+        <img src={pokedexIcon} alt="Pokedex" className="z-10 h-full" />
       )}
     </Link>
   );
