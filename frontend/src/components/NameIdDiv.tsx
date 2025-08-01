@@ -1,4 +1,4 @@
-import { type Pokemon } from "../types";
+import { type Pokemon } from "../lib/types";
 
 interface OutputProps {
   pokemon: Pokemon | null;

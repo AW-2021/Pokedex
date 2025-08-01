@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { type Pokemon } from "../types";
+import { type Pokemon } from "../lib/types";
 import LeftPokedex from "./LeftPokedex";
 import RightPokedex from "./RightPokedex";
 

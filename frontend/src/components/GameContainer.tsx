@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { type CardType } from "../types";
+import { type CardType } from "../lib/types";
 import Card from "./Card";
 import ContainerTop from "./ContainerTop";
 

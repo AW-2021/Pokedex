@@ -1,17 +1,15 @@
 import { IoMdSearch } from "react-icons/io";
-import { type Pokemon } from "../types";
 import { type ButtonAction } from "./Pokedex";
 import ArrowButtons from "./ArrowButtons";
 
 interface FormProps {
-  pokemon: Pokemon | null;
   fetchPokemon: (event: React.FormEvent<HTMLFormElement>) => void;
   nameOrId: string;
   setNameOrId: React.Dispatch<React.SetStateAction<string>>;
   setBtnType: React.Dispatch<React.SetStateAction<ButtonAction>>;
 };
 
-const Form = ({ pokemon, fetchPokemon, nameOrId, setNameOrId, setBtnType }: FormProps) => {
+const Form = ({ fetchPokemon, nameOrId, setNameOrId, setBtnType }: FormProps) => {
   return (
     <div
         id="form-div"

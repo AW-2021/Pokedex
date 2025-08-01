@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { type CardType } from "../types";
+import { type CardType } from "../lib/types";
 import ogLogo from "../assets/images/og-logo.png";
 import Hero from "../components/Hero";
 import GameNavbar from "../components/GameNavbar";

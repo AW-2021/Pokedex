@@ -1,4 +1,4 @@
-import { type CardType } from "../types";
+import { type CardType } from "../lib/types";
 interface CardProps {
   card: CardType;
   handleClick: (id: string) => void;

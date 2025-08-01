@@ -1,5 +1,5 @@
 import pokedexRight from "../assets/images/pokedex-copy.png";
-import { type Pokemon } from "../types";
+import { type Pokemon } from "../lib/types";
 import SizeDiv from "./SizeDiv";
 import Table from "./Table";
 

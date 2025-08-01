@@ -1,5 +1,5 @@
 import pokedex from "../assets/images/pokedex.png";
-import { type Pokemon } from "../types";
+import { type Pokemon } from "../lib/types";
 import { type ButtonAction } from "./Pokedex";
 import OutputDiv from "./OutputDiv";
 import NameIdDiv from "./NameIdDiv";
@@ -28,7 +28,7 @@ const LeftPokedex = ({
       <img src={pokedex} className="max-h-[750px] object-contain" />
       <OutputDiv pokemon={pokemon} />
       <NameIdDiv pokemon={pokemon} />
-      <Form pokemon={pokemon} fetchPokemon={fetchPokemon} nameOrId={nameOrId} setNameOrId={setNameOrId} setBtnType={setBtnType} />
+      <Form fetchPokemon={fetchPokemon} nameOrId={nameOrId} setNameOrId={setNameOrId} setBtnType={setBtnType} />
     </div>
   );
 };
