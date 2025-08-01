@@ -1,14 +1,10 @@
 # Pokémon's Pokedex Application with TCG Mega Cards
-## Frontend: React + TypeScript + Vite + TailwindCSS
-## Backend: Express + TypeScript
 
-### APIs Used : PokeAPI and Pokemon TCG API
-
-![Repo Size](https://img.shields.io/github/repo-size/AW-2021/my-pokemon-app?color=blue)
-![Issues](https://img.shields.io/github/issues/AW-2021/my-pokemon-app)
-![Forks](https://img.shields.io/github/forks/AW-2021/my-pokemon-app?style=social)
-![Stars](https://img.shields.io/github/stars/AW-2021/my-pokemon-app?style=social)
-![License](https://img.shields.io/github/license/AW-2021/my-pokemon-app)
+![Repo Size](https://img.shields.io/github/repo-size/AW-2021/Pokedex?color=blue)
+![Issues](https://img.shields.io/github/issues/AW-2021/Pokedex)
+![Forks](https://img.shields.io/github/forks/AW-2021/Pokedex?style=social)
+![Stars](https://img.shields.io/github/stars/AW-2021/Pokedex?style=social)
+![License](https://img.shields.io/github/license/AW-2021/Pokedex)
 
 ---
 
@@ -18,6 +14,15 @@
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | **Frontend** | ![Frontend Deployment](https://img.shields.io/website?url=https://your-frontend-service.onrender.com&up_message=Online&down_message=Offline) |
 | **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://your-backend-service.onrender.com/api/cards&up_message=Online&down_message=Offline) |
+
+---
+
+## 📚 Tech Stack
+
+### Frontend: React + TypeScript + Vite + TailwindCSS
+### Backend: Express + TypeScript
+
+### APIs: PokeAPI and Pokemon TCG API
 
 ---
 
@@ -51,7 +56,7 @@ Pokedex/
 │   ├── src/
 │   │   └── server.ts      # API proxy endpoint
 │   ├── package.json
-│   └── .env               # API_SECRET_KEY (local only; set in Render dashboard for deployment)
+│   └── .env               # POKEMONTCG_API_KEY (local; set in Render for deployment)
 │
 ├── frontend/              # React + Vite + Tailwind CSS app
 │   ├── src/
