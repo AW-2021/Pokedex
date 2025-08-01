@@ -4,11 +4,15 @@
 
 # <p align="center">Pokémon's Pokedex App with TCG Mega Cards</p>
 
-![Repo Size](https://img.shields.io/github/repo-size/AW-2021/Pokedex?color=blue)
-![Issues](https://img.shields.io/github/issues/AW-2021/Pokedex)
+<div align="center">
+ 
+![Repo Size](https://img.shields.io/github/repo-size/AW-2021/Pokedex?color=mediumblue)
+![Issues](https://img.shields.io/github/issues/AW-2021/Pokedex?color=peru)
 ![Forks](https://img.shields.io/github/forks/AW-2021/Pokedex?style=social)
 ![Stars](https://img.shields.io/github/stars/AW-2021/Pokedex?style=social)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-gold.svg)](LICENSE)
+ 
+</div>
 
 ---
 
