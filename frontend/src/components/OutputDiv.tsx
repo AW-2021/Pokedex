@@ -31,7 +31,7 @@ const OutputDiv = ({ pokemon }: OutputProps) => {
         id="types-container"
         className="flex justify-start gap-2 border-0 border-red-500"
       >
-        {pokemon?.types.map((pokeType, index) => (
+        {pokemon?.types?.map((pokeType, index) => (
           <span
             key={index}
             id={"type-" + pokeType.type.name}
