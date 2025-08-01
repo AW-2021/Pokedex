@@ -1,4 +1,6 @@
-<img src="/frontend/src/assets/images/logo2.png" alt="logo" />
+ <div align="center" >
+  <img src="/frontend/src/assets/images/logo2.png" alt="logo" />
+</div>
 
 # <p align="center">Pokémon's Pokedex App with TCG Mega Cards</p>
 
