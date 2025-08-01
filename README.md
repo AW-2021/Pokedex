@@ -1,10 +1,11 @@
-# Pokémon's Pokedex Application with TCG Mega Cards
+<img src="/frontend/src/assets/images/logo2.png" alt="logo" width="450" height="auto" />
+# <p align="center">Pokémon's Pokedex App with TCG Mega Cards</p>
 
 ![Repo Size](https://img.shields.io/github/repo-size/AW-2021/Pokedex?color=blue)
 ![Issues](https://img.shields.io/github/issues/AW-2021/Pokedex)
 ![Forks](https://img.shields.io/github/forks/AW-2021/Pokedex?style=social)
 ![Stars](https://img.shields.io/github/stars/AW-2021/Pokedex?style=social)
-![License](https://img.shields.io/github/license/AW-2021/Pokedex)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
 ---
 
@@ -17,7 +18,7 @@
 
 ---
 
-## 📚 Tech Stack
+## ⚙️ Tech Stack
 
 ### Frontend: React + TypeScript + Vite + TailwindCSS
 ### Backend: Express + TypeScript
