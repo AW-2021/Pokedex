@@ -1,15 +1,16 @@
 import pokedex from "../assets/images/pokedex.png";
 import { type Pokemon } from "../types";
+import { type ButtonAction } from "./Pokedex";
 import OutputDiv from "./OutputDiv";
 import NameIdDiv from "./NameIdDiv";
 import Form from "./Form";
-import ArrowButtons from "./ArrowButtons";
 
 interface LeftProps {
   pokemon: Pokemon | null;
   fetchPokemon: (event: React.FormEvent<HTMLFormElement>) => void;
   nameOrId: string;
   setNameOrId: React.Dispatch<React.SetStateAction<string>>;
+  setBtnType: React.Dispatch<React.SetStateAction<ButtonAction>>;
 }
 
 const LeftPokedex = ({
@@ -17,6 +18,7 @@ const LeftPokedex = ({
   fetchPokemon,
   nameOrId,
   setNameOrId,
+  setBtnType
 }: LeftProps) => {
   return (
     <div
@@ -26,8 +28,7 @@ const LeftPokedex = ({
       <img src={pokedex} className="max-h-[750px] object-contain" />
       <OutputDiv pokemon={pokemon} />
       <NameIdDiv pokemon={pokemon} />
-      <Form fetchPokemon={fetchPokemon} nameOrId={nameOrId} setNameOrId={setNameOrId} />
-      <ArrowButtons />
+      <Form pokemon={pokemon} fetchPokemon={fetchPokemon} nameOrId={nameOrId} setNameOrId={setNameOrId} setBtnType={setBtnType} />
     </div>
   );
 };
