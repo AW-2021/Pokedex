@@ -1,4 +1,5 @@
-<img src="/frontend/src/assets/images/logo2.png" alt="logo" width="450" height="auto" />
+<img src="/frontend/src/assets/images/logo2.png" alt="logo" />
+
 # <p align="center">Pokémon's Pokedex App with TCG Mega Cards</p>
 
 ![Repo Size](https://img.shields.io/github/repo-size/AW-2021/Pokedex?color=blue)
