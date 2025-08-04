@@ -88,27 +88,29 @@ This app uses an **Express backend proxy** for:
 
 ```
 Pokedex/
-├── backend/               # Express server (API proxy with private API key handling)
+├── backend/                 # Express server (API proxy with private API key handling)
 │   ├── src/
-│   │   └── server.ts      # API proxy endpoint
+│   │   └── server.ts        # API proxy endpoint
 │   ├── package.json
-│   └── .env               # POKEMONTCG_API_KEY (local; set in Render for deployment)
+│   └── .env                 # POKEMONTCG_API_KEY (local; set in Render for deployment)
 │
-├── frontend/              # React + Vite + Tailwind CSS app
+├── frontend/                # React + Vite + Tailwind CSS app
 │   ├── src/
-│   │   |── assets/images      # All image assets
-│   │   |── components/        # All TSX components
-│   │   |── hooks/             # Custom hook to handle resizing
+│   │   |── assets/images         # All image assets
+│   │   |── components/           # All TSX components
+│   │   |── hooks/                # Custom hook to handle resizing
 │   │   |── lib/      
-│   │   |   └── types.ts       # Shared/global types
-│   │   |── pages/             # React-Router pages made from TSX components
+│   │   |   └── types.ts          # Shared/global types
+│   │   |── pages/                # React-Router pages made from TSX components
+|   |   |   |── HomePage.tsx      # Landing page
+|   |   |   └── CardGamePage.tsx  # Card Game page
 │   │   |── utils/        
-│   │   |   └── typeColors.ts  # Holds utility constants
-│   │   └── App.tsx            # Main UI component
+│   │   |   └── typeColors.ts     # Holds utility constants
+│   │   └── App.tsx               # Main UI component
 │   ├── package.json
-│   └── .env               # VITE_BACKEND_URL (set to backend URL)
+│   └── .env                  # VITE_BACKEND_URL (set to backend URL)
 │
-├── README.md              # Project documentation
+├── README.md                 # Project documentation
 ```
 
 ---
