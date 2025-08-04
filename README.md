@@ -192,11 +192,11 @@ Pokedex/
 
 ## 🎨 UI Preview
 
-|                    | Desktop                                                                                    | Mobile                                                                                    |
-| ------------------ | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| **Home Page**      | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/screenshots/d-homepage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/screenshots/m-homepage.png) |
-| **Card Game Page** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/screenshots/d-gamepage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/screenshots/m-gamepage.png) |
-| **Loading Screen** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/screenshots/d-loading.png)  | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/screenshots/m-loading.png)  |
+|                    | Desktop                                                                        | Mobile                                                                        |
+| ------------------ | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| **Home Page**      | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-homepage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-homepage.png) |
+| **Card Game Page** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-gamepage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-gamepage.png) |
+| **Loading Screen** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-loading.png)  | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-loading.png)  |
 
 ---
 
@@ -217,10 +217,11 @@ This project is licensed under the [MIT License](LICENSE).
 - PokéAPI: [https://pokeapi.co/](https://pokeapi.co/)
 - Pokémon TCG API: [https://pokemontcg.io](https://pokemontcg.io)
 - Render: [https://render.com](https://render.com)
+- Tailwind CSS Docs: [https://tailwindcss.com/](https://tailwindcss.com/)
 - Shields.io (badges): [https://shields.io](https://shields.io)
 
 ---
 
 ## ❓ Questions?
 
-If you have any questions, feel free to [open an issue](https://github.com/AW-2021/Pokedex/issues).
+If you have any questions, feel free to [open an issue](https://github.com/AW-2021/Pokedex/issues) or [contact me](mailto:aminawasif20@gmail.com)!
