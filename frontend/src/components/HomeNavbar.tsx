@@ -29,7 +29,7 @@ const HomeNavbar = () => {
       )}
 
       {showText && (screenSize !== "sm") && (
-        <p className="z-10 h-full text-center font-semibold">
+        <p className="z-10 h-full text-center font-semibold text-xs md:text-sm lg:text-base">
           Play the <span className="block">Memory Game →</span>
         </p>
       )}

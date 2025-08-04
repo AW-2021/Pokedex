@@ -5,7 +5,7 @@ interface ContainerTopProps {
 
 const ContainerTop = ({ score, highScore }: ContainerTopProps) => {
   return (
-    <div className="w-full border-0 border-purple-600 flex justify-between items-center">
+    <div className="w-full border-0 border-purple-600 flex justify-between items-center gap-13 md:gap-0">
       <div className="border-0 border-red-600">
         <p className="text-shadow-lg text-shadow-black">
           Get points by clicking on an image
