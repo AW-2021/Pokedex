@@ -6,7 +6,7 @@ import logo2 from "../assets/images/logo2.png";
 
 const HomePage = () => {
   return (
-    <div className="bg-game-2 bg-fixed xl:bg-cover font-display h-screen w-full sm:h-full flex flex-col items-center ">
+    <div className="bg-game-2 sm:bg-cover h-screen md:h-auto w-full font-display flex flex-col items-center bg-yellow-950">
       <HomeNavbar />
       <Hero logo={logo2} title="Pokémon Search App" cssStyle="h-32 mb-4" hasShadow={true} />
       <Pokedex />
