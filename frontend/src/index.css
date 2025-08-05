@@ -21,6 +21,12 @@
   --background-image-pokedex: url("./assets/images/pokedexbg.jpg");
 }
 
+html, body, #root {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
