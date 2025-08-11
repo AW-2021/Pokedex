@@ -61,7 +61,7 @@ const Pokedex = () => {
   return (
     <div
       id="pokedex"
-      className="z-20 border-0 border-red-600 mb-2 drop-shadow-xl drop-shadow-black flex justify-center items-center"
+      className="z-20 border-0 border-red-600 mt-4 md:mt-0 mb-2 drop-shadow-xl drop-shadow-black flex justify-center items-center"
     >
       {/* Left Pokedex Panel */}
       <LeftPokedex
