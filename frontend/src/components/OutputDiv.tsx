@@ -1,4 +1,4 @@
-import { typeColors } from "../utils/typeColors";
+import { pokeTypeColors } from "../utils/typeColors";
 import { type Pokemon } from "../lib/types";
 
 interface OutputProps {
@@ -35,7 +35,7 @@ const OutputDiv = ({ pokemon }: OutputProps) => {
           <span
             key={index}
             id={"type-" + pokeType.type.name}
-            className={`${baseTypeClass} ${typeColors[pokeType.type.name] || "bg-red-400"}`}
+            className={`${baseTypeClass} ${pokeTypeColors[pokeType.type.name] || "bg-red-400"}`}
           >
             {pokeType.type.name}
           </span>

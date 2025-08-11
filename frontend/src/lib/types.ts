@@ -1,3 +1,44 @@
+const typeArr = [
+  "fire",
+  "grass",
+  "water",
+  "fairy",
+  "psychic",
+  "dragon",
+  "fighting",
+] as const;
+
+export type Type = (typeof typeArr)[number];
+
+const pTypeArr = [
+  "dark",
+  "electric",
+  "ghost",
+  "ice",
+  "normal",
+  "poison",
+  "rock",
+  "steel",
+  "bug",
+  "ground",
+  "flying",
+  "stellar",
+  "unknown",
+  ...typeArr
+] as const;
+
+export type PType = (typeof pTypeArr)[number];
+
+export const cTypeArr = [
+  "metal",
+  "darkness",
+  "lightning",
+  "colorless",
+  ...typeArr
+] as const;
+
+export type CType = (typeof cTypeArr)[number];
+
 interface Other {
   dream_world: {
     front_default: string | null;
@@ -26,7 +67,7 @@ interface Sprite {
 interface PokeType {
   slot: number;
   type: {
-    name: string;
+    name: PType;
   }
 }
 
@@ -34,7 +75,7 @@ interface Stat {
   base_stat: number;
   stat: {
     name: string;
-  }
+  };
 }
 
 export interface Pokemon {

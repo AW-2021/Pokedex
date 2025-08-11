@@ -26,8 +26,8 @@ Backend API: [https://your-backend-service.onrender.com/api/cards](https://your-
 
 | Service     | Status                                                                                                                                      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| **Frontend** | ![Frontend Deployment](https://img.shields.io/website?url=https://your-frontend-service.onrender.com&up_message=Online&down_message=Offline) |
-| **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://your-backend-service.onrender.com/api/cards&up_message=Online&down_message=Offline) |
+| **Frontend** | ![Frontend Deployment](https://img.shields.io/website?url=https://frontend-service.onrender.com&up_message=Online&down_message=Offline) |
+| **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://backend-service.onrender.com/api/cards&up_message=Online&down_message=Offline) |
 
 ---
 
@@ -65,7 +65,7 @@ Backend API: [https://your-backend-service.onrender.com/api/cards](https://your-
   Easily deployable via Render with **HTTPS** out-of-the-box.
 
 - **Monorepo Structure**  
-  Manage frontend & backend in one repository for easier deployment and version control.
+  Manages frontend & backend in one repository for easier deployment and version control.
 
 - **Fast Frontend with Vite**  
   Utilizes **Vite** for ultra-fast development & builds.
@@ -129,7 +129,7 @@ Pokedex/
 
 | Method | Route        | Description                                           |
 | ------ | ------------ | ----------------------------------------------------- |
-| `GET`  | `/api/cards` | Fetches Pokémon Mega cards from the Pokemon TCG API   |
+| `GET`  | `/api/cards/:type` | Fetches Pokémon Mega cards based on type (default = "fire") from the Pokemon TCG API   |
 
 ---
 
@@ -176,7 +176,6 @@ Pokedex/
         }
       ],
       "number": "3",
-      "artist": "Daisuke Ito",
       "rarity": "Rare Holo",
       "flavorText": "It is said that CHARIZARD's fire burns hotter if it has experienced harsh battles.",
       "nationalPokedexNumbers": [

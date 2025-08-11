@@ -13,8 +13,8 @@ app.use(cors({
 //app.use(cors());
 app.use(express.json());
 
-app.get('/api/cards', async (req, res) => {
-    const url = "https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire";
+app.get('/api/cards/:type', async (req, res) => {
+    const url = `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:${req.params.type}`;
 
     try {
         const response = await fetch(url, {
