@@ -17,8 +17,8 @@ A Fullstack Web App to browse Pokémon data from the PokéAPI and learn more abo
 
 ## 🖼️ Live Demo
 
-Frontend: [https://your-frontend-service.onrender.com](https://frontend-service.onrender.com)  
-Backend API: [https://your-backend-service.onrender.com/api/cards](https://backend-service.onrender.com/api/cards)
+Frontend: [https://frontend-service.onrender.com](https://frontend-service.onrender.com)  
+Backend API: [https://backend-service.onrender.com/api/cards](https://backend-service.onrender.com/api/cards)
 
 ---
 
@@ -50,7 +50,7 @@ Backend API: [https://your-backend-service.onrender.com/api/cards](https://backe
   Fetch, search and display data (id, name, sprite, stats, types) for all Pokémon through the **PokéAPI**.
 
 - **View & Interact with Pokémon Mega Cards**  
-  Learn about popular Pokémon cards (of Fire type) fetched from the **Pokémon TCG API**, through a memory card game.
+  Learn about popular Pokémon cards of different types fetched from the **Pokémon TCG API**, through a memory card game.
 
 - **Responsive Design**  
   Fully responsive UI using **Tailwind CSS**, works on desktop & mobile.
@@ -135,6 +135,7 @@ Pokedex/
 
 ## 📝 Example Response
 
+### Pokémon TCG API cURL: **https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**
 ```json
 {
   "data": [
@@ -142,7 +143,6 @@ Pokedex/
       "id": "dp3-3",
       "name": "Charizard",
       "supertype": "Pokémon",
-      "level": "55",
       "hp": "130",
       "types": [
         "Fire"
@@ -175,8 +175,6 @@ Pokedex/
           "value": "+40"
         }
       ],
-      "number": "3",
-      "rarity": "Rare Holo",
       "flavorText": "It is said that CHARIZARD's fire burns hotter if it has experienced harsh battles.",
       "nationalPokedexNumbers": [
         6
@@ -185,8 +183,84 @@ Pokedex/
         "small": "https://images.pokemontcg.io/dp3/3.png",
         "large": "https://images.pokemontcg.io/dp3/3_hires.png"
       },
-    }
+    },
+    ...
   ]
+}
+```
+
+### PokéAPI cURL: **https://pokeapi.co/api/v2/pokemon/pikachu**
+
+```json
+{
+  "height": 4,
+  "id": 25,
+  "name": "pikachu",
+  "sprites": {
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    "other": {},
+    "versions": {}
+  },
+  "stats": [
+    {
+      "base_stat": 35,
+      "effort": 0,
+      "stat": {
+        "name": "hp",
+        "url": "https://pokeapi.co/api/v2/stat/1/"
+      }
+    },
+    {
+      "base_stat": 55,
+      "effort": 0,
+      "stat": {
+        "name": "attack",
+        "url": "https://pokeapi.co/api/v2/stat/2/"
+      }
+    },
+    {
+      "base_stat": 40,
+      "effort": 0,
+      "stat": {
+        "name": "defense",
+        "url": "https://pokeapi.co/api/v2/stat/3/"
+      }
+    },
+    {
+      "base_stat": 50,
+      "effort": 0,
+      "stat": {
+        "name": "special-attack",
+        "url": "https://pokeapi.co/api/v2/stat/4/"
+      }
+    },
+    {
+      "base_stat": 50,
+      "effort": 0,
+      "stat": {
+        "name": "special-defense",
+        "url": "https://pokeapi.co/api/v2/stat/5/"
+      }
+    },
+    {
+      "base_stat": 90,
+      "effort": 2,
+      "stat": {
+        "name": "speed",
+        "url": "https://pokeapi.co/api/v2/stat/6/"
+      }
+    }
+  ],
+  "types": [
+    {
+      "slot": 1,
+      "type": {
+        "name": "electric",
+        "url": "https://pokeapi.co/api/v2/type/13/"
+      }
+    }
+  ],
+  "weight": 60
 }
 ```
 
