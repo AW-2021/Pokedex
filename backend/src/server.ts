@@ -13,6 +13,10 @@ app.use(cors({
 //app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200).send("Backend is running 🚀");
+});
+
 app.get('/api/cards/:type', async (req, res) => {
     const url = `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:${req.params.type}`;
 
