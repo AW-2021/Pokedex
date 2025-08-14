@@ -17,8 +17,8 @@ A Fullstack Web App to browse Pokémon data from the PokéAPI and learn more abo
 
 ## 🖼️ Live Demo
 
-Frontend: [https://frontend-service.onrender.com](https://frontend-service.onrender.com)  
-Backend API: [https://backend-service.onrender.com/api/cards](https://backend-service.onrender.com/api/cards)
+Frontend: [https://pokedex-633e.onrender.com](https://pokedex-633e.onrender.com)  
+Backend API: [https://pokedex-backend-twtb.onrender.com/api/cards/fire](https://pokedex-backend-twtb.onrender.com/api/cards/fire)
 
 ---
 
@@ -26,8 +26,8 @@ Backend API: [https://backend-service.onrender.com/api/cards](https://backend-se
 
 | Service     | Status                                                                                                                                      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| **Frontend** | ![Frontend Deployment](https://img.shields.io/website?url=https://frontend-service.onrender.com&up_message=Online&down_message=Offline) |
-| **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://backend-service.onrender.com/api/cards&up_message=Online&down_message=Offline) |
+| **Frontend** | ![Frontend Deployment](https://img.shields.io/website?url=https://pokedex-633e.onrender.com&up_message=Online&down_message=Offline) |
+| **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://pokedex-backend-twtb.onrender.com/api/cards&up_message=Online&down_message=Offline) |
 
 ---
 
@@ -135,8 +135,8 @@ Pokedex/
 
 ## 📝 Example Response
 
-### Pokémon TCG API
-cURL: [**https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**](https://api.pokemontcg.io/v2/cards?q=supertype:pokemon%20types:fire)
+### Backend: api/cards/fire 
+> Pokémon TCG API cURL: [**https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**](https://api.pokemontcg.io/v2/cards?q=supertype:pokemon%20types:fire)
 
 ```json
 {
@@ -191,8 +191,8 @@ cURL: [**https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**](ht
 }
 ```
 
-### PokéAPI
-cURL: **https://pokeapi.co/api/v2/pokemon/pikachu**
+### Frontend Fetch
+> PokéAPI cURL: **https://pokeapi.co/api/v2/pokemon/pikachu**
 
 ```json
 {

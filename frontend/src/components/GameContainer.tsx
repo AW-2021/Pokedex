@@ -52,7 +52,7 @@ const GameContainer = ({
   };
 
   return (
-    <div className="w-full py-4 px-16 border-0 border-yellow-300 my-6 md:my-8 flex flex-col justify-center items-center gap-8">
+    <div className="w-full pt-4 pb-8 px-16 my-6 md:my-8 flex flex-col justify-center items-center gap-8 bg-dark-blue">
       <ContainerTop
         score={score}
         highScore={highScore}
