@@ -27,7 +27,7 @@ Backend API: [https://pokedex-backend-twtb.onrender.com/api/cards/fire](https://
 | Service     | Status                                                                                                                                      |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | **Frontend** | ![Frontend Deployment](https://img.shields.io/website?url=https://pokedex-633e.onrender.com&up_message=Online&down_message=Offline) |
-| **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://pokedex-backend-twtb.onrender.com/api/cards&up_message=Online&down_message=Offline) |
+| **Backend**  | ![Backend Deployment](https://img.shields.io/website?url=https://pokedex-backend-twtb.onrender.com&up_message=Online&down_message=Offline) |
 
 ---
 
