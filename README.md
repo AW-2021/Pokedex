@@ -135,7 +135,9 @@ Pokedex/
 
 ## 📝 Example Response
 
-### Pokémon TCG API cURL: **https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**
+### Pokémon TCG API
+cURL: [**https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**](https://api.pokemontcg.io/v2/cards?q=supertype:pokemon%20types:fire)
+
 ```json
 {
   "data": [
@@ -189,7 +191,8 @@ Pokedex/
 }
 ```
 
-### PokéAPI cURL: **https://pokeapi.co/api/v2/pokemon/pikachu**
+### PokéAPI
+cURL: **https://pokeapi.co/api/v2/pokemon/pikachu**
 
 ```json
 {
