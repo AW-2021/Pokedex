@@ -17,8 +17,8 @@ A Fullstack Web App to browse Pokémon data from the PokéAPI and learn more abo
 
 ## 🖼️ Live Demo
 
-Frontend: [https://your-frontend-service.onrender.com](https://your-frontend-service.onrender.com)  
-Backend API: [https://your-backend-service.onrender.com/api/cards](https://your-backend-service.onrender.com/api/cards)
+Frontend: [https://your-frontend-service.onrender.com](https://frontend-service.onrender.com)  
+Backend API: [https://your-backend-service.onrender.com/api/cards](https://backend-service.onrender.com/api/cards)
 
 ---
 
@@ -197,7 +197,7 @@ Pokedex/
 |                    | Desktop                                                                        | Mobile                                                                        |
 | ------------------ | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | **Home Page**      | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-homepage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-homepage.png) |
-| **Card Game Page** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-gamepage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-gamepage.png) |
+| **Card Game Page** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-cardpage.png) | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-cardpage.png) |
 | **Loading Screen** | ![Desktop Screenshot](./frontend/src/assets/images/screenshots/d-loading.png)  | ![Mobile Screenshot](./frontend/src/assets/images/screenshots/m-loading.png)  |
 
 ---
