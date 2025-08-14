@@ -7,15 +7,27 @@ import ContainerTop from "./ContainerTop";
 interface ContainerProps {
   cards: CardType[] | null;
   setCards: React.Dispatch<React.SetStateAction<CardType[] | null>>;
-  loading: boolean
+  loading: boolean;
   type: CType;
   setType: React.Dispatch<React.SetStateAction<CType>>;
+  score: number;
+  setScore: React.Dispatch<React.SetStateAction<number>>;
+  highScore: number;
+  setHighScore: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const GameContainer = ({ cards, setCards, loading, type, setType }: ContainerProps) => {
+const GameContainer = ({
+  cards,
+  setCards,
+  loading,
+  type,
+  setType,
+  score,
+  setScore,
+  highScore,
+  setHighScore,
+}: ContainerProps) => {
   const [chosenCards, setChosenCards] = useState<string[]>([]);
-  const [score, setScore] = useState<number>(0);
-  const [highScore, setHighScore] = useState<number>(0);
 
   const handleClick = (id: string) => {
     if (chosenCards.includes(id)) {

@@ -11,14 +11,19 @@ const CardGamePage = () => {
   const [cards, setCards] = useState<CardType[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [type, setType] = useState<CType>("fire");
+  const [score, setScore] = useState<number>(0);
+  const [highScore, setHighScore] = useState<number>(0);
 
   useEffect(() => {
     const fetchCards = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/${type}`);
+        const res = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/api/cards/${type}`
+        );
         const data = await res.json();
         setCards(data?.data?.slice(0, ARR_LENGTH));
+        setScore(0);
       } catch (err) {
         console.log("Error", err);
       } finally {
@@ -32,8 +37,23 @@ const CardGamePage = () => {
   return (
     <div className="w-full h-full min-h-screen flex flex-col items-center bg-dark-blue font-display text-white">
       <GameNavbar />
-      <Hero logo={ogLogo} title="Memory Card Game" cssStyle="h-34 mb-6" hasShadow={false} />
-      <GameContainer cards={cards} setCards={setCards} type={type} setType={setType} loading={loading} />
+      <Hero
+        logo={ogLogo}
+        title="Memory Card Game"
+        cssStyle="h-34 mb-6"
+        hasShadow={false}
+      />
+      <GameContainer
+        cards={cards}
+        setCards={setCards}
+        type={type}
+        setType={setType}
+        loading={loading}
+        score={score}
+        setScore={setScore}
+        highScore={highScore}
+        setHighScore={setHighScore}
+      />
     </div>
   );
 };
