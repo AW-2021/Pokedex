@@ -186,7 +186,7 @@ cURL: [**https://api.pokemontcg.io/v2/cards?q=supertype:pokemon types:fire**](ht
         "large": "https://images.pokemontcg.io/dp3/3_hires.png"
       },
     },
-    ...
+    ....
   ]
 }
 ```
